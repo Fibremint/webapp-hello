@@ -13,5 +13,5 @@ router = routers.SimpleRouter()
 router.register(r'jobs', JobViewSet)
 
 urlpatterns = [
-    url(r'^api/v1/', include(router.urls)),
+    url(r'^', include(router.urls)),
 ]
