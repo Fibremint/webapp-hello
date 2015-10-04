@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	{% load staticfiles %}
+	<script type="text/javascript" src="{% static 'angular/angular.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'angular-route/angular-route.min.js' %}"></script>
 	<link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
-	<link rel="stylesheet" href="{% static 'angular/angular.min.js' %}">
-	<link rel="stylesheet" href="{% static 'angular-route/angular-route.min.js' %}">
+
 </head>
 <body>
 	{% block content %}
