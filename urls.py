@@ -6,12 +6,13 @@ Created on Sep 12, 2015
 from django.conf.urls import include, url
 from rest_framework import routers
 
-from hello_app.views import JobViewSet
+from .views import JobViewSet, index
 
 
-router = routers.SimpleRouter()
+router = routers.DefaultRouter()
 router.register(r'jobs', JobViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^api/v1/', include(router.urls)),
+    url(r'^$', index, name='hello_index'),
 ]
